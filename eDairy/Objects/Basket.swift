@@ -11,10 +11,10 @@ import UIKit
 class Basket: NSObject {
     
     var totalPrice: Double
-    var items: [Item]
+    var items: [String : Int] //Dictionary of Product name (must be unique) (key) and amount of that item (value)
     
     override init() {
-        self.items = Array()
+        self.items = Dictionary()
         self.totalPrice = 0
     }
 }

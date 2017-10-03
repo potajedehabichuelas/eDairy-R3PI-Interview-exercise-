@@ -23,7 +23,7 @@ class ItemTests: XCTestCase {
         super.tearDown()
     }
     
-    func testItemJSONParser() {
+    func testProductJSONParser() {
         let bundle = Bundle(for: type(of: self))
         
         
@@ -42,7 +42,7 @@ class ItemTests: XCTestCase {
             return
         }
         
-        let item: Item =  Item(itemDict: jsonDict)
+        let item: Item =  Product(itemDict: jsonDict)
         
         XCTAssertEqual(item.name, "Peas")
         XCTAssertEqual(item.price, 0.95)

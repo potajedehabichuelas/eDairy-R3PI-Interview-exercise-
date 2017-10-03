@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Product.swift
 //  eDairy
 //
 //  Created by Daniel Bolivar herrera on 3/10/17.
@@ -14,7 +14,7 @@ struct itemKeys {
     static let priceDescription = "priceDescription"
 }
 
-class Item: NSObject {
+class Product: NSObject {
 
     var name: String
     var price: Double
@@ -22,7 +22,6 @@ class Item: NSObject {
     
     
     override init() {
-        
         self.name = ""
         self.priceDescription = ""
         self.price = 0
