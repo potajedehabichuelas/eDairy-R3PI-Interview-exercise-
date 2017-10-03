@@ -14,6 +14,10 @@
 		33298DEA1F841D2400D5B662 /* eDairyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33298DE91F841D2400D5B662 /* eDairyTests.swift */; };
 		33298DF51F841D2400D5B662 /* eDairyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33298DF41F841D2400D5B662 /* eDairyUITests.swift */; };
 		33298E081F841D9E00D5B662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33298E041F841D9D00D5B662 /* ViewController.swift */; };
+		33298E0A1F8424F500D5B662 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 33298E091F8424F500D5B662 /* items.json */; };
+		33298E0C1F84263800D5B662 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33298E0B1F84263800D5B662 /* Item.swift */; };
+		33298E0E1F8427B900D5B662 /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33298E0D1F8427B900D5B662 /* ItemTests.swift */; };
+		33298E101F84283500D5B662 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 33298E0F1F84283500D5B662 /* item.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		33298DF41F841D2400D5B662 /* eDairyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eDairyUITests.swift; sourceTree = "<group>"; };
 		33298DF61F841D2400D5B662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33298E041F841D9D00D5B662 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33298E091F8424F500D5B662 /* items.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = items.json; path = Resources/items.json; sourceTree = "<group>"; };
+		33298E0B1F84263800D5B662 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		33298E0D1F8427B900D5B662 /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
+		33298E0F1F84283500D5B662 /* item.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = item.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 				33298E031F841D9D00D5B662 /* View Controllers */,
 				33298DD41F841D2300D5B662 /* AppDelegate.swift */,
 				33298DD81F841D2300D5B662 /* Main.storyboard */,
+				33298E091F8424F500D5B662 /* items.json */,
 				33298DDB1F841D2300D5B662 /* Assets.xcassets */,
 				33298DDD1F841D2300D5B662 /* LaunchScreen.storyboard */,
 				33298DE01F841D2300D5B662 /* Info.plist */,
@@ -114,8 +123,10 @@
 		33298DE81F841D2400D5B662 /* eDairyTests */ = {
 			isa = PBXGroup;
 			children = (
+				33298E0D1F8427B900D5B662 /* ItemTests.swift */,
 				33298DE91F841D2400D5B662 /* eDairyTests.swift */,
 				33298DEB1F841D2400D5B662 /* Info.plist */,
+				33298E0F1F84283500D5B662 /* item.json */,
 			);
 			path = eDairyTests;
 			sourceTree = "<group>";
@@ -147,6 +158,7 @@
 		33298E051F841D9D00D5B662 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				33298E0B1F84263800D5B662 /* Item.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -272,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33298E0A1F8424F500D5B662 /* items.json in Resources */,
 				33298DDF1F841D2300D5B662 /* LaunchScreen.storyboard in Resources */,
 				33298DDC1F841D2300D5B662 /* Assets.xcassets in Resources */,
 				33298DDA1F841D2300D5B662 /* Main.storyboard in Resources */,
@@ -282,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33298E101F84283500D5B662 /* item.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33298E081F841D9E00D5B662 /* ViewController.swift in Sources */,
+				33298E0C1F84263800D5B662 /* Item.swift in Sources */,
 				33298DD51F841D2300D5B662 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33298E0E1F8427B900D5B662 /* ItemTests.swift in Sources */,
 				33298DEA1F841D2400D5B662 /* eDairyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
