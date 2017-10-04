@@ -13,6 +13,36 @@ class EDNetworkManager: NSObject {
     //Singleton
     static let sharedInstance = EDNetworkManager()
     
+    func getAvailableCurrencies(completion: @escaping ([CurrencyPair]?) -> Void) {
+        
+        let url = URL(string: "http://www.apilayer.net/api/live?access_key=93d2c61d00998a6759f27f919ea07240")
+        
+        let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+            
+            do {
+                guard let jsonDict = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any] else { completion(nil); return }
+                //Parse response into currency pairs
+                
+                guard let pairsDict = jsonDict[currencyExchangeKeys.quotes] as? [String : Any] else { completion(nil); return }
+                
+                var currencyArray = [CurrencyPair]()
+                for pair in pairsDict  {
+                    guard let value = pair.value as? Double else {
+                        print("Error processing pair: value is not Double")
+                        continue
+                    }
+                    let newPair = CurrencyPair(currencyName: pair.key, currencyValue: value)
+                    currencyArray.append(newPair)
+                }
+                completion(currencyArray)
+            } catch {
+                completion(nil)
+            }
+        }
+        
+        task.resume()
+    }
+    
     func getItemsForSale(completion: @escaping ([String : Product]?) -> Void) {
         //Ideally this would come from our server, but for this example we'll just read a JSON file
         
