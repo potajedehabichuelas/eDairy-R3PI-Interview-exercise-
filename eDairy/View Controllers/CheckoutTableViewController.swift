@@ -116,7 +116,7 @@ class CheckoutTableViewController: UITableViewController, UISearchResultsUpdatin
             if self.shouldShowSearchResults {
                 return self.filteredCurrencies.count
             } else {
-                return self.currenctyPairs.count
+                return  0 //self.currenctyPairs.count //Remove comment on this line to show list of currencies
             }
         }
     }
