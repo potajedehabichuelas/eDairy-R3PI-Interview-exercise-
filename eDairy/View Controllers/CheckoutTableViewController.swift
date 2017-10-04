@@ -157,7 +157,7 @@ class CheckoutTableViewController: UITableViewController, UISearchResultsUpdatin
             
             //Display value in other currencies
             cell.backgroundColor = UIColor(red: 222/255, green: 230/255, blue: 230/255, alpha: 1.0)
-            cell.totalPrice.text = "\(currency.getCurrencyTag()) \(self.checkOutPrice * currency.usdValue)"
+            cell.totalPrice.text = "\(self.checkOutPrice * currency.usdValue) \(currency.getCurrencyTag())"
         }
 
         return cell
