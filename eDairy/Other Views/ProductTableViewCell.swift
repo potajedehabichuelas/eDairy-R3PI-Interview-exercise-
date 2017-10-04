@@ -28,7 +28,17 @@ class ProductTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.bgroundView.layer.borderColor = UIColor(red: 41/255, green: 163/255, blue: 41/255, alpha: 1.0).cgColor
+    }
+    
+    func animateBorderWidth(view: UIView, from: CGFloat, to: CGFloat, duration: Double) {
+        let animation:CABasicAnimation = CABasicAnimation(keyPath: "borderWidth")
+        animation.fromValue = from
+        animation.toValue = to
+        animation.duration = duration
+        animation.autoreverses = false
+        view.layer.add(animation, forKey: "Width")
+        view.layer.borderWidth = to
     }
     
     @IBAction func buyProduct(_ sender: Any) {
@@ -36,8 +46,9 @@ class ProductTableViewCell: UITableViewCell {
         guard let prod = self.product else {
             print("Product cell: Buying product that is not set")
             return
-            
         }
+        self.animateBorderWidth(view: self.bgroundView, from: 3, to: 0, duration: 0.3)
+        
         self.delegate?.addProductToBasket(product: prod)
     }
     

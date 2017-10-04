@@ -23,6 +23,7 @@
 		334A13AC1F84463A00790EF0 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A13AB1F84463A00790EF0 /* ProductTableViewCell.swift */; };
 		334A13AE1F844D7700790EF0 /* EDNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A13AD1F844D7700790EF0 /* EDNetworkManager.swift */; };
 		334EF7851F8458F00028D0A4 /* EDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EF7841F8458F00028D0A4 /* EDStorage.swift */; };
+		339A0B761F8468E100703954 /* BasketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339A0B751F8468E100703954 /* BasketTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		334A13AB1F84463A00790EF0 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		334A13AD1F844D7700790EF0 /* EDNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDNetworkManager.swift; sourceTree = "<group>"; };
 		334EF7841F8458F00028D0A4 /* EDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDStorage.swift; sourceTree = "<group>"; };
+		339A0B751F8468E100703954 /* BasketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				334A13A91F84461300790EF0 /* MarketTableViewController.swift */,
+				339A0B751F8468E100703954 /* BasketTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				334EF7851F8458F00028D0A4 /* EDStorage.swift in Sources */,
 				334A13A81F8441B400790EF0 /* Basket.swift in Sources */,
 				334A13AA1F84461300790EF0 /* MarketTableViewController.swift in Sources */,
+				339A0B761F8468E100703954 /* BasketTableViewController.swift in Sources */,
 				334A13AC1F84463A00790EF0 /* ProductTableViewCell.swift in Sources */,
 				334A13AE1F844D7700790EF0 /* EDNetworkManager.swift in Sources */,
 				33298E0C1F84263800D5B662 /* Product.swift in Sources */,
