@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct CurrenciesUrl {
+    static let exchangeCurrencies = "http://www.apilayer.net/api/live?access_key=93d2c61d00998a6759f27f919ea07240"
+}
+
 class EDNetworkManager: NSObject {
 
     //Singleton
@@ -15,7 +19,7 @@ class EDNetworkManager: NSObject {
     
     func getAvailableCurrencies(completion: @escaping ([CurrencyPair]?) -> Void) {
         
-        let url = URL(string: "http://www.apilayer.net/api/live?access_key=93d2c61d00998a6759f27f919ea07240")
+        let url = URL(string: CurrenciesUrl.exchangeCurrencies)
         
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
             
