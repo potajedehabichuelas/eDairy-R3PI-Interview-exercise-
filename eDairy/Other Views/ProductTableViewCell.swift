@@ -11,7 +11,7 @@ import UIKit
 public let productCellId = "productCellId"
 
 protocol ProductCellDelegate {
-    func addProductToBasket(product: Product)
+    func addProductToBasket(productId: String)
 }
 
 class ProductTableViewCell: UITableViewCell {
@@ -21,7 +21,7 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var price: UILabel!
     
-    var product: Product?
+    var productId: String?
     var delegate:ProductCellDelegate?
     
     override func awakeFromNib() {
@@ -35,13 +35,13 @@ class ProductTableViewCell: UITableViewCell {
     
     func addProduct() {
         
-        guard let prod = self.product else {
+        guard let prodId = self.productId else {
             print("Product cell: Buying product that is not set")
             return
         }
         animateBorderWidth(view: self.bgroundView, from: 3, to: 0, duration: 0.3)
         
-        self.delegate?.addProductToBasket(product: prod)
+        self.delegate?.addProductToBasket(productId: prodId)
     }
 
 }

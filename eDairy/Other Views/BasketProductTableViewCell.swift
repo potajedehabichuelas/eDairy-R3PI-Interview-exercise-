@@ -11,8 +11,8 @@ import UIKit
 public let basketCellId = "BasketCellId"
 
 protocol BasketProductCellDelegate {
-    func addProductToBasket(product: Product)
-    func removeProductFromBasket(product: Product)
+    func addProductToBasket(productId: String)
+    func removeProductFromBasket(productId: String)
 }
 
 class BasketProductTableViewCell: UITableViewCell {
@@ -23,7 +23,7 @@ class BasketProductTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     
     var delegate:BasketProductCellDelegate?
-    var product: Product?
+    var productId: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,21 +38,21 @@ class BasketProductTableViewCell: UITableViewCell {
 
     @IBAction func removeProduct(_ sender: Any) {
         
-        guard let prod = self.product else {
+        guard let prodId = self.productId else {
             print("Basket cell: Modifying product that is not set")
             return
         }
     
-        self.delegate?.removeProductFromBasket(product: prod)
+        self.delegate?.removeProductFromBasket(productId: prodId)
     }
    
     @IBAction func addProduct(_ sender: Any) {
         
-        guard let prod = self.product else {
+        guard let prodId = self.productId else {
             print("Basket cell: Modifying product that is not set")
             return
         }
         
-        self.delegate?.addProductToBasket(product: prod)
+        self.delegate?.addProductToBasket(productId: prodId)
     }
 }

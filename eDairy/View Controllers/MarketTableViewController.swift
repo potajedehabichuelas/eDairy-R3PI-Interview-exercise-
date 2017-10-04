@@ -48,7 +48,9 @@ class MarketTableViewController: UITableViewController, ProductCellDelegate {
     
     // MARK: - ProductCell Delegate
     
-    func addProductToBasket(product: Product) {
+    func addProductToBasket(productId: String) {
+        
+        guard let product = EDStorage.sharedInstance.availableProducts[productId] else { return }
         //Add Item to the basket
         EDStorage.sharedInstance.basket.addProduct(product: product)
     }
@@ -71,7 +73,7 @@ class MarketTableViewController: UITableViewController, ProductCellDelegate {
         let item = self.shopProducts[indexPath.section]
         
         cell.delegate = self
-        cell.product = item
+        cell.productId = item.id
         cell.name.text = item.name
         cell.price.text = "$ \(item.price)"
         cell.priceDescription.text = item.priceDescription

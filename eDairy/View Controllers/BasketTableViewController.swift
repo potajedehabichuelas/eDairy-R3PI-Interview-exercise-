@@ -60,7 +60,7 @@ class BasketTableViewController: UITableViewController, BasketProductCellDelegat
             
             guard let product = EDStorage.sharedInstance.availableProducts[productId], let amount = self.basket.items[product.id] else { return cell}
             
-            cell.product = product
+            cell.productId = productId
             cell.delegate = self
             cell.name.text = product.name
             cell.amount.text = "\(amount)"
@@ -115,13 +115,17 @@ class BasketTableViewController: UITableViewController, BasketProductCellDelegat
     
     // MARK: - BasketProductCellDelegate
     
-    func addProductToBasket(product: Product) {
+    func addProductToBasket(productId: String) {
+        
+        guard let product = EDStorage.sharedInstance.availableProducts[productId] else { return }
         
         EDStorage.sharedInstance.basket.addProduct(product: product)
         self.tableView.reloadData()
     }
     
-    func removeProductFromBasket(product: Product) {
+    func removeProductFromBasket(productId: String) {
+        
+        guard let product = EDStorage.sharedInstance.availableProducts[productId] else { return }
         
         EDStorage.sharedInstance.basket.removeProduct(product: product)
         self.tableView.reloadData()
