@@ -95,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "testAddItemBasket()"
+            landmarkName = "testRemoveBasketProduct()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,11 +106,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eDairy/View Controllers/BasketTableViewController.swift"
-            timestampString = "528779913.527174"
+            timestampString = "528812799.741522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "calculateBasketTotalPrice()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eDairyTests/BasketTableViewControllerTests.swift"
+            timestampString = "528812799.741593"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "testBasketTotalValue()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eDairyTests.BasketTableViewControllerTests.testBasketTotalValue() -&gt; ()"
+                  moduleName = "eDairyTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dani/Desktop/R3PI/eDairy/eDairyTests/BasketTableViewControllerTests.swift"
+                  timestampString = "528812492.520051"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "976">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Double in eDairyTests.BasketTableViewControllerTests.testBasketTotalValue() -&gt; ()"
+                  moduleName = "eDairyTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dani/Desktop/R3PI/eDairy/eDairyTests/BasketTableViewControllerTests.swift"
+                  timestampString = "528812492.522437"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () throws -&gt; Swift.Double in eDairyTests.BasketTableViewControllerTests.testBasketTotalValue() -&gt; ()"
+                  moduleName = "eDairyTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dani/Desktop/R3PI/eDairy/eDairyTests/BasketTableViewControllerTests.swift"
+                  timestampString = "528812492.524668"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eDairy/View Controllers/BasketTableViewController.swift"
+            timestampString = "528812799.74203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "calculateBasketTotalPrice()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eDairy/View Controllers/BasketTableViewController.swift"
+            timestampString = "528812799.742076"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "calculateBasketTotalPrice()"
             landmarkType = "7">
          </BreakpointContent>

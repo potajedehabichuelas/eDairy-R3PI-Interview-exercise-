@@ -40,4 +40,8 @@ class Basket: NSObject {
             print("Error: Trying to remove a product that is not in the basket")
         }
     }
+    
+    func removeProductCompletely(product: Product) {
+        self.items.removeValue(forKey: product.id)
+    }
 }

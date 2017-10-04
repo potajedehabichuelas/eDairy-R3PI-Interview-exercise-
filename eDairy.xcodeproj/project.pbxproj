@@ -26,6 +26,7 @@
 		3397D5691F84831A0064F60A /* BasketTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397D5681F84831A0064F60A /* BasketTotalTableViewCell.swift */; };
 		339A0B761F8468E100703954 /* BasketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339A0B751F8468E100703954 /* BasketTableViewController.swift */; };
 		33BBF2161F8485C30069C4E9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBF2151F8485C30069C4E9 /* Utilities.swift */; };
+		33BBF2181F8506CA0069C4E9 /* BasketTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBF2171F8506CA0069C4E9 /* BasketTableViewControllerTests.swift */; };
 		33C55F5D1F847112007CE04C /* BasketProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C55F5C1F847112007CE04C /* BasketProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		3397D5681F84831A0064F60A /* BasketTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTotalTableViewCell.swift; sourceTree = "<group>"; };
 		339A0B751F8468E100703954 /* BasketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewController.swift; sourceTree = "<group>"; };
 		33BBF2151F8485C30069C4E9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		33BBF2171F8506CA0069C4E9 /* BasketTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewControllerTests.swift; sourceTree = "<group>"; };
 		33C55F5C1F847112007CE04C /* BasketProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 		33298DE81F841D2400D5B662 /* eDairyTests */ = {
 			isa = PBXGroup;
 			children = (
+				33BBF2171F8506CA0069C4E9 /* BasketTableViewControllerTests.swift */,
 				331E15661F84676F00521FFA /* BasketTests.swift */,
 				33298E0D1F8427B900D5B662 /* ProductTests.swift */,
 				33298DE91F841D2400D5B662 /* eDairyTests.swift */,
@@ -369,6 +372,7 @@
 				33298E0E1F8427B900D5B662 /* ProductTests.swift in Sources */,
 				331E15671F84676F00521FFA /* BasketTests.swift in Sources */,
 				33298DEA1F841D2400D5B662 /* eDairyTests.swift in Sources */,
+				33BBF2181F8506CA0069C4E9 /* BasketTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
