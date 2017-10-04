@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MarketTableViewController: UITableViewController {
+class MarketTableViewController: UITableViewController, ProductCellDelegate {
 
     var shopProducts = [Product]() {
         didSet {
@@ -44,6 +44,13 @@ class MarketTableViewController: UITableViewController {
             self.tableView.isScrollEnabled = false;
         }
     }
+    
+    // MARK: - ProductCell Delegate
+    
+    func addProductToBasket(product: Product) {
+        //Add Item to the basket
+        EDStorage.sharedInstance.basket.addProduct(product: product)
+    }
 
     // MARK: - Table view data source
 
@@ -62,6 +69,8 @@ class MarketTableViewController: UITableViewController {
         
         let item = self.shopProducts[indexPath.section]
         
+        cell.delegate = self
+        cell.product = item
         cell.name.text = item.name
         cell.price.text = "$ \(item.price)"
         cell.priceDescription.text = item.priceDescription

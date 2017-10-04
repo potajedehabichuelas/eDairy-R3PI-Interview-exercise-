@@ -2,21 +2,25 @@
  {
  "name": "Peas",
  "price": 0.95,
+ "id" : "greenPeas13209",
  "priceDescription": "per bag"
  },
  {
  "name": "Eggs",
  "price": 2.1,
+ "id" : "eggsdozen123",
  "priceDescription": "per dozen"
  },
  {
  "name": "Milk",
  "price": 1.3,
+ "id" : "standardmilk390",
  "priceDescription": "per bottle"
  },
  {
  "name": "Beans",
  "price": 0.73,
+ "id" : "SpanishBeans",
  "priceDescription": "per can"
  }
 ]

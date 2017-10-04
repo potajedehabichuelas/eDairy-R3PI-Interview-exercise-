@@ -8,10 +8,9 @@
 
 import XCTest
 
+@testable import eDairy
 
-@testable import  eDairy
-
-class ItemTests: XCTestCase {
+class ProductTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,6 +20,16 @@ class ItemTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testProductInitializer() {
+        
+        let product = Product(name: "Peas", id: "234", price: 200, pricedescrip: "per kg")
+        
+        XCTAssertEqual(product.name, "Peas")
+        XCTAssertEqual(product.id, "234")
+        XCTAssertEqual(product.price, 200)
+        XCTAssertEqual(product.priceDescription, "per kg")
     }
     
     func testProductJSONParser() {
@@ -42,9 +51,10 @@ class ItemTests: XCTestCase {
             return
         }
         
-        let item: Item =  Product(itemDict: jsonDict)
+        let item: Product =  Product(itemDict: jsonDict)
         
         XCTAssertEqual(item.name, "Peas")
+        XCTAssertEqual(item.id, "greenPeas13209")
         XCTAssertEqual(item.price, 0.95)
         XCTAssertEqual(item.priceDescription, "per bag")
     }
