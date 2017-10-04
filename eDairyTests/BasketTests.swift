@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import eDairy
+
 class BasketTests: XCTestCase {
     
     override func setUp() {
@@ -20,16 +22,24 @@ class BasketTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAddItemBasket() {
+        let basket = Basket()
+        let product: Product = Product(name: "Peas", id: "234", price: 200, pricedescrip: "per kg")
+        basket.addProduct(product: product)
+        //Check there is only one item
+        XCTAssertEqual(basket.items.count, 1)
+        
+        //Check the id of the product is the same
+        for prod in basket.items {
+            XCTAssertEqual(prod.key, product.id)
+            XCTAssertEqual(prod.value, 1)
         }
     }
     
+    func testRemoveBasketProduct() {
+        let basket = Basket()
+        let product: Product = Product(name: "Peas", id: "234", price: 200, pricedescrip: "per kg")
+        basket.removeProduct(product: product)
+        XCTAssertEqual(basket.items.count, 0)
+    }
 }

@@ -21,24 +21,4 @@ class eDairyTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testAddItemBasket() {
-        let basket = Basket()
-        let product: Product = Product(name: "Peas", id: "234", price: 200, pricedescrip: "per kg")
-        basket.addProduct(product: product)
-        //Check there is only one item
-        XCTAssertEqual(basket.items.count, 1)
-        
-        //Check the id of the product is the same
-        for productId in basket.items.keys {
-            XCTAssertEqual(productId, product.id)
-        }
-    }
-    
-    func testRemoveBasketProduct() {
-        let basket = Basket()
-        let product: Product = Product(name: "Peas", id: "234", price: 200, pricedescrip: "per kg")
-        basket.removeProduct(product: product)
-        XCTAssertEqual(basket.items.count, 0)
-    }
 }

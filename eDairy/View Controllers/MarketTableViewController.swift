@@ -24,8 +24,9 @@ class MarketTableViewController: UITableViewController, ProductCellDelegate {
 
         //Get the products
         EDNetworkManager.sharedInstance.getItemsForSale(completion: { products in
-            if let prodArray = products {
-                self.shopProducts = prodArray
+            if let prodDictionary = products {
+                self.shopProducts = Array(prodDictionary.values)
+                EDStorage.sharedInstance.availableProducts = prodDictionary
             }
         })
     }
@@ -88,6 +89,11 @@ class MarketTableViewController: UITableViewController, ProductCellDelegate {
         view.backgroundColor = UIColor(red: 222/255, green: 230/255, blue: 230/255, alpha: 1.0)
         
         return bgView
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedIndexPath = self.tableView.indexPathForSelectedRow, let cell = self.tableView.cellForRow(at: selectedIndexPath) as? ProductTableViewCell else { return}
+        cell.addProduct()
     }
 
     /*

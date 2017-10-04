@@ -23,7 +23,10 @@
 		334A13AC1F84463A00790EF0 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A13AB1F84463A00790EF0 /* ProductTableViewCell.swift */; };
 		334A13AE1F844D7700790EF0 /* EDNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A13AD1F844D7700790EF0 /* EDNetworkManager.swift */; };
 		334EF7851F8458F00028D0A4 /* EDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EF7841F8458F00028D0A4 /* EDStorage.swift */; };
+		3397D5691F84831A0064F60A /* BasketTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397D5681F84831A0064F60A /* BasketTotalTableViewCell.swift */; };
 		339A0B761F8468E100703954 /* BasketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339A0B751F8468E100703954 /* BasketTableViewController.swift */; };
+		33BBF2161F8485C30069C4E9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBF2151F8485C30069C4E9 /* Utilities.swift */; };
+		33C55F5D1F847112007CE04C /* BasketProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C55F5C1F847112007CE04C /* BasketProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +69,10 @@
 		334A13AB1F84463A00790EF0 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		334A13AD1F844D7700790EF0 /* EDNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDNetworkManager.swift; sourceTree = "<group>"; };
 		334EF7841F8458F00028D0A4 /* EDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDStorage.swift; sourceTree = "<group>"; };
+		3397D5681F84831A0064F60A /* BasketTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTotalTableViewCell.swift; sourceTree = "<group>"; };
 		339A0B751F8468E100703954 /* BasketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewController.swift; sourceTree = "<group>"; };
+		33BBF2151F8485C30069C4E9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		33C55F5C1F847112007CE04C /* BasketProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		33298DD31F841D2300D5B662 /* eDairy */ = {
 			isa = PBXGroup;
 			children = (
+				33BBF2141F8485B50069C4E9 /* Utilities */,
 				33298E021F841D9D00D5B662 /* Networking */,
 				33298E051F841D9D00D5B662 /* Objects */,
 				33298E061F841D9D00D5B662 /* Other Views */,
@@ -183,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				334A13AB1F84463A00790EF0 /* ProductTableViewCell.swift */,
+				33C55F5C1F847112007CE04C /* BasketProductTableViewCell.swift */,
+				3397D5681F84831A0064F60A /* BasketTotalTableViewCell.swift */,
 			);
 			path = "Other Views";
 			sourceTree = "<group>";
@@ -193,6 +202,14 @@
 				334EF7841F8458F00028D0A4 /* EDStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		33BBF2141F8485B50069C4E9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				33BBF2151F8485C30069C4E9 /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,8 +349,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				334EF7851F8458F00028D0A4 /* EDStorage.swift in Sources */,
+				33C55F5D1F847112007CE04C /* BasketProductTableViewCell.swift in Sources */,
+				33BBF2161F8485C30069C4E9 /* Utilities.swift in Sources */,
 				334A13A81F8441B400790EF0 /* Basket.swift in Sources */,
 				334A13AA1F84461300790EF0 /* MarketTableViewController.swift in Sources */,
+				3397D5691F84831A0064F60A /* BasketTotalTableViewCell.swift in Sources */,
 				339A0B761F8468E100703954 /* BasketTableViewController.swift in Sources */,
 				334A13AC1F84463A00790EF0 /* ProductTableViewCell.swift in Sources */,
 				334A13AE1F844D7700790EF0 /* EDNetworkManager.swift in Sources */,

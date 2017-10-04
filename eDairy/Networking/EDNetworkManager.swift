@@ -13,7 +13,7 @@ class EDNetworkManager: NSObject {
     //Singleton
     static let sharedInstance = EDNetworkManager()
     
-    func getItemsForSale(completion: @escaping ([Product]?) -> Void) {
+    func getItemsForSale(completion: @escaping ([String : Product]?) -> Void) {
         //Ideally this would come from our server, but for this example we'll just read a JSON file
         
         DispatchQueue.global(qos: .background).async {
@@ -27,11 +27,12 @@ class EDNetworkManager: NSObject {
                 return
             }
             
-            var products = [Product]()
+            var products = [String :Product]()
             for productDict in productsJSON {
                 let newProduct = Product(itemDict: productDict)
-                products.append(newProduct)
+                products[newProduct.id] = newProduct
             }
+            
             DispatchQueue.main.async {
                 completion(products)
             }

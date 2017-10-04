@@ -14,4 +14,6 @@ class EDStorage: NSObject {
     static let sharedInstance = EDStorage()
     
     var basket: Basket = Basket()
+    
+    var availableProducts: [String : Product] = Dictionary() //Key would be id of product - value would be product
 }

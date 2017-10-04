@@ -8,8 +8,10 @@
 
 import UIKit
 
-class BasketTableViewController: UITableViewController {
+class BasketTableViewController: UITableViewController, BasketProductCellDelegate {
 
+    var basket = EDStorage.sharedInstance.basket
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,24 +37,72 @@ class BasketTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0 {
+            return basket.items.values.count
+        } else {
+            return 1
+        }
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        
+        if indexPath.section == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: basketCellId, for: indexPath) as! BasketProductTableViewCell
+            
+            let productId = Array(self.basket.items.keys)[indexPath.row]
+            
+            guard let product = EDStorage.sharedInstance.availableProducts[productId], let amount = self.basket.items[product.id] else { return cell}
+            
+            cell.product = product
+            cell.delegate = self
+            cell.name.text = product.name
+            cell.amount.text = "\(amount)"
+            cell.totalPrice.text = "$ \(product.price * Double(amount))"
+            
+            return cell
+        } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: basketTotalCellId, for: indexPath) as! BasketTotalTableViewCell
+            cell.totalPrice.text = " $ \(self.calculateBasketTotalPrice())"
+            
+            return cell
+        }
     }
-    */
+    
+    func calculateBasketTotalPrice() -> Double {
+        
+        var totalPrice = 0.0
+        
+        for item in self.basket.items {
+            let prodId = item.key
+            guard let product = EDStorage.sharedInstance.availableProducts[prodId], let amount = self.basket.items[product.id] else {
+                print("Error Calculating basket total price: Product not found")
+                continue
+            }
+            totalPrice += product.price * Double(amount)
+        }
+        
+        return totalPrice
+    }
+    
+    // MARK: - BasketProductCellDelegate
+    
+    func addProductToBasket(product: Product) {
+        
+        EDStorage.sharedInstance.basket.addProduct(product: product)
+        self.tableView.reloadData()
+    }
+    
+    func removeProductFromBasket(product: Product) {
+        
+        EDStorage.sharedInstance.basket.removeProduct(product: product)
+        self.tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.

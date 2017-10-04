@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eDairy/Networking/EDNetworkManager.swift"
-            timestampString = "528766858.166056"
+            timestampString = "528777658.411963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eDairy/Networking/EDNetworkManager.swift"
-            timestampString = "528766858.166121"
+            timestampString = "528777658.412051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "getItemsForSale(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eDairy/Networking/EDNetworkManager.swift"
-            timestampString = "528766858.166164"
+            timestampString = "528777658.41211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -90,12 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eDairyTests/BasketTests.swift"
-            timestampString = "528770859.779415"
+            timestampString = "528777658.412159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "testExample()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "testAddItemBasket()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eDairy/View Controllers/BasketTableViewController.swift"
+            timestampString = "528779913.527174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "calculateBasketTotalPrice()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -23,7 +23,7 @@ class Basket: NSObject {
             self.items[product.id] = productAmount+1
         } else {
             //Add key if it does not exist
-            self.items[product.id] = 0
+            self.items[product.id] = 1
         }
     }
     
