@@ -13,6 +13,7 @@ public let basketTotalCellId = "basketTotalCellId"
 class BasketTotalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var totalPrice: UILabel!
+    @IBOutlet weak var checkOutButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

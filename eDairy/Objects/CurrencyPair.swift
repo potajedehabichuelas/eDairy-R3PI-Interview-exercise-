@@ -25,9 +25,13 @@ class CurrencyPair: NSObject {
     }
     
     convenience init(currencyName: String, currencyValue: Double) {
-        
         self.init()
         self.pairName = currencyName
         self.usdValue = currencyValue
+    }
+    
+    func getCurrencyTag() -> String {
+        //Example USDEUR -> EUR
+        return self.pairName.replacingOccurrences(of: "USD", with: "")
     }
 }

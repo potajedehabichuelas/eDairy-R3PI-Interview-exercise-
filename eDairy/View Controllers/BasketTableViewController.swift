@@ -9,10 +9,12 @@
 import UIKit
 
 public let basketTableViewControllerSbId = "BasketTableViewController"
+private let checkOutSegueId = "CheckOutSegue"
 
 class BasketTableViewController: UITableViewController, BasketProductCellDelegate {
 
     var basket = EDStorage.sharedInstance.basket
+    var totalBasketPrice = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +72,18 @@ class BasketTableViewController: UITableViewController, BasketProductCellDelegat
         } else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: basketTotalCellId, for: indexPath) as! BasketTotalTableViewCell
-            cell.totalPrice.text = " $ \(self.calculateBasketTotalPrice())"
+            //Also update local reference
+            self.totalBasketPrice = self.calculateBasketTotalPrice()
+            cell.totalPrice.text = " $ \(self.totalBasketPrice)"
+            
+            cell.checkOutButton.addTarget(self, action:#selector(self.checkoutBasket), for: .touchUpInside)
             
             return cell
         }
+    }
+    
+    @objc func checkoutBasket() {
+     
     }
     
     func calculateBasketTotalPrice() -> Double {
@@ -130,6 +140,18 @@ class BasketTableViewController: UITableViewController, BasketProductCellDelegat
         EDStorage.sharedInstance.basket.removeProduct(product: product)
         self.tableView.reloadData()
     }
+    
 
-
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == checkOutSegueId {
+            guard let checkoutVC = segue.destination as? CheckoutTableViewController else {
+                print("Error in segue to Checkout View Controller")
+                return
+            }
+            checkoutVC.checkOutPrice = self.totalBasketPrice
+        }
+    }
 }
